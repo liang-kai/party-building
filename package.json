@@ -1,37 +1,22 @@
 {
-  "name": "electron-quick-start",
+  "name": "your-project-name",
   "version": "1.0.0",
-  "description": "A 党建APP 桌面端",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish"
-  },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
   ],
-  "author": "liangkai",
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "@electron-forge/cli": "^7.6.0",
-    "@electron-forge/maker-deb": "^7.6.0",
-    "@electron-forge/maker-rpm": "^7.6.0",
-    "@electron-forge/maker-squirrel": "^7.6.0",
-    "@electron-forge/maker-zip": "^7.6.0",
-    "@electron-forge/plugin-auto-unpack-natives": "^7.6.0",
-    "@electron-forge/plugin-fuses": "^7.6.0",
-    "@electron-forge/publisher-github": "^7.6.0",
-    "@electron/fuses": "^1.8.0",
-    "electron": "^33.2.1"
+  "scripts": {
+    "dev:admin": "cd apps/admin && npm run dev",
+    "dev:desktop": "cd apps/desktop && npm run dev",
+    "build:admin": "cd apps/admin && npm run build",
+    "build:desktop": "cd apps/desktop && npm run build",
+    "start:admin": "cd apps/admin && npm run start",
+    "start:desktop": "cd apps/desktop && npm run start"
   },
-  "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "prettier": "^2.8.8",
+    "eslint": "^8.40.0"
   }
 }
